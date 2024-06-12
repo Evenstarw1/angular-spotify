@@ -1,0 +1,39 @@
+<div class="album-detail-container">
+  <div class="back-button">
+    <button mat-raised-button color="primary" routerLink="/">Back</button>
+  </div>
+  <div *ngIf="AlbumDetail">
+    <mat-card class="card-detail">
+      <img
+        [src]="AlbumDetail.image_url"
+        [alt]="AlbumDetail.name"
+        [width]="AlbumDetail.image_width"
+      />
+      <mat-card-title>{{ AlbumDetail.name }}</mat-card-title>
+
+      <mat-card-subtitle> Album Details </mat-card-subtitle>
+
+      <p>Release Date: {{ AlbumDetail.release_date }}</p>
+      <p>Popularity: {{ AlbumDetail.popularity }}</p>
+      <mat-progress-bar mode="determinate" [value]="AlbumDetail.popularity">
+      </mat-progress-bar>
+      <button
+        class="track-list-button"
+        mat-raised-button
+        (click)="toggleDetails()"
+      >
+        {{ showAllDetails ? "Hide" : "Show" }} track list
+      </button>
+
+      <div *ngIf="showAllDetails">
+        <mat-expansion-panel>
+          <mat-list>
+            <mat-list-item *ngFor="let track of AlbumDetail.track_list">
+              {{ track.name }} ({{ track.duration_ms | date : "mm:ss" }})
+            </mat-list-item>
+          </mat-list>
+        </mat-expansion-panel>
+      </div>
+    </mat-card>
+  </div>
+</div>

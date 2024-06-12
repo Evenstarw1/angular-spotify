@@ -1,0 +1,22 @@
+.album-list-container {
+  padding: 65px 40px;
+}
+
+.cards-view-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px 10px;
+}
+
+.album-list-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.spinner-veil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

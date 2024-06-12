@@ -1,0 +1,26 @@
+<div class="album-list-container">
+  <div class="album-list-button-container">
+    <button mat-icon-button color="primary" (click)="toggleViewMode('cards')">
+      <mat-icon>view_cozy</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" (click)="toggleViewMode('grid')">
+      <mat-icon>list</mat-icon>
+    </button>
+  </div>
+  <div class="spinner-veil">
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+  </div>
+  <div *ngIf="!isLoading" [ngSwitch]="viewMode">
+    <ng-container *ngSwitchCase="'cards'">
+      <div class="cards-view-container">
+        <app-album-card
+          *ngFor="let album of albums"
+          [album]="album"
+        ></app-album-card>
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="'grid'">
+      <app-album-grid [albums]="albums"></app-album-grid>
+    </ng-container>
+  </div>
+</div>

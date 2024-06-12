@@ -1,0 +1,13 @@
+<mat-card class="card animate__animated animate__bounce animate__zoomIn">
+  <img mat-card-image [src]="album.imageUrl" alt="{{ album.name }}" />
+  <mat-card-header>
+    <mat-card-title class="card-title">{{ album.name }}</mat-card-title>
+  </mat-card-header>
+  <div class="card-button">
+    <mat-card-actions>
+      <button mat-raised-button [routerLink]="['/album', album.id]">
+        View Details
+      </button>
+    </mat-card-actions>
+  </div>
+</mat-card>

@@ -1,0 +1,24 @@
+.album-detail-container {
+  padding: 65px 40px;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+mat-progress-bar {
+  width: 150px;
+}
+
+.track-list-button {
+  margin: 20px 0;
+  width: 250px;
+}
+
+.back-button {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}

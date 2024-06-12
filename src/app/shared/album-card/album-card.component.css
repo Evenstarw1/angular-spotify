@@ -1,0 +1,15 @@
+.card {
+  width: 300px;
+  height: 480px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+
+.card-title {
+  font-size: 16px;
+  color: rgb(145, 89, 157);
+}
