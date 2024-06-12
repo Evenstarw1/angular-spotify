@@ -22,3 +22,10 @@ mat-progress-bar {
   display: flex;
   justify-content: flex-end;
 }
+
+@media (max-width: 768px) {
+  .album-image {
+    width: 100%;
+    height: auto;
+  }
+}
